@@ -79,5 +79,45 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== HERO ANIMATION TRIGGER (Opcional si se requiere lógica extra) =====
-// El IntersectionObserver general ya maneja la clase .animate en el hero.
+// ===== CUSTOM CURSOR PRO =====
+const cursor = document.querySelector('.custom-cursor');
+const follower = document.querySelector('.cursor-follower');
+let mouseX = 0, mouseY = 0;
+let followerX = 0, followerY = 0;
+
+window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Dot follows instantly
+    if (cursor) {
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    }
+});
+
+// Smooth follower logic
+function animateFollower() {
+    // Delays follow by 10% each frame for laggy feel
+    followerX += (mouseX - followerX) * 0.1;
+    followerY += (mouseY - followerY) * 0.1;
+    
+    if (follower) {
+        follower.style.left = followerX + 'px';
+        follower.style.top = followerY + 'px';
+    }
+    requestAnimationFrame(animateFollower);
+}
+animateFollower();
+
+// Hover interactions
+document.querySelectorAll('a, button, .plan-card, .inst-card, input, select, textarea').forEach(el => {
+    el.addEventListener('mouseenter', () => follower.classList.add('active'));
+    el.addEventListener('mouseleave', () => follower.classList.remove('active'));
+});
+
+// Hide cursor on touch devices
+if ('ontouchstart' in window) {
+    if (cursor) cursor.style.display = 'none';
+    if (follower) follower.style.display = 'none';
+}

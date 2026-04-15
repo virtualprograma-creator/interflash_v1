@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
@@ -44,6 +46,9 @@
 </head>
 
 <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
 
     <header id="header">
         <div class="container">
@@ -96,12 +101,14 @@
         <section id="porque-interflash">
             <div class="container">
                 <div class="section-header animate">
-                    <h2>¿Por qué elegir <span style="color: var(--primary);">InterFlash</span>?</h2>
+                    <h2>¿Por qué elegir <span>InterFlash</span>?</h2>
                     <p>Lideramos la revolución digital en Acapulco.</p>
                 </div>
                 <div class="institucional-grid porque-grid">
                     <div class="inst-card animate">
-                        <i class="fas fa-bolt"></i>
+                        <div class="lottie-container">
+                            <lottie-player src="https://lottie.host/8e75fdd5-6385-4161-8406-8a0a8661604c/6L6S8A6S8A.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
                         <h3>FIBRA ÓPTICA</h3>
                         <p>Olvídate del internet lento. Con nuestra red de fibra óptica navega rápido y sin
                             complicaciones.</p>
@@ -113,7 +120,9 @@
                         </ul>
                     </div>
                     <div class="inst-card animate">
-                        <i class="fas fa-infinity"></i>
+                        <div class="lottie-container">
+                            <lottie-player src="https://lottie.host/7e04f981-0570-4e40-9a4d-f3b7b4d45d3c/9fGjG9GjG9.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
                         <h3>NAVEGA SIN LÍMITES</h3>
                         <p>Aquí no hay letras chiquitas ni engaños. Usa tu internet como quieras, cuando quieras.</p>
                         <ul class="check-list">
@@ -123,7 +132,9 @@
                         </ul>
                     </div>
                     <div class="inst-card animate">
-                        <i class="fas fa-headset"></i>
+                        <div class="lottie-container">
+                            <lottie-player src="https://lottie.host/4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d/support.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
                         <h3>SOPORTE TÉCNICO</h3>
                         <p>No eres un número más. Somos de Acapulco y te atendemos como se debe.</p>
                         <ul class="check-list">
@@ -133,7 +144,9 @@
                         </ul>
                     </div>
                     <div class="inst-card animate">
-                        <i class="fas fa-shield-alt"></i>
+                        <div class="lottie-container">
+                            <lottie-player src="https://lottie.host/5b6c7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e/security.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </div>
                         <h3>CONEXIÓN SEGURA</h3>
                         <p>Tu internet listo para el día a día.</p>
                         <ul class="check-list">
