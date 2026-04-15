@@ -1,0 +1,15 @@
+# Sistema y carpetas locales
+Thumbs.db
+Desktop.ini
+.DS_Store
+Nueva carpeta/
+respaldo_2026-03-18_1718/
+
+# Dependencias y builds
+node_modules/
+dist/
+out/
+.next/
+build/
+*.log
+
